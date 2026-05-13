@@ -1,3 +1,3 @@
-Model B Prompts Dataset:
+Model A Outputs Used for Model B Prompt Generation:
 
 https://drive.google.com/uc?id=1Ly5U7h_l-f_MxOkYRXi4u4LBEjhcz-ne
