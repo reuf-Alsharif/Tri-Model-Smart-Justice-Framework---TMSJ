@@ -49,34 +49,6 @@ The dataset was constructed from two official Saudi governmental sources:
 - **4,677 judicial decisions** from the Saudi Ministry of Justice (`laws.moj.gov.sa`)
 - **25 statutory laws** from the Bureau of Experts at the Council of Ministers (`laws.boe.gov.sa`)
 
-### Accessing the Data
-
-The datasets are hosted on Kaggle. Download using `kagglehub`:
-
-```python
-import kagglehub
-
-# Model A data
-kagglehub.dataset_download('janaalotaibi/model-a')
-
-# Model B data
-kagglehub.dataset_download('ruofalshreef/model-b-v3')
-
-# Segmented cases
-kagglehub.dataset_download('ruofalshreef/segment')
-
-# Model C data
-kagglehub.dataset_download('mayaralo/datasetmodelcfiles')
-
-# Baseline laws
-kagglehub.dataset_download('ruofalshreef/lawbase')
-
-# Trained Model A weights
-kagglehub.dataset_download('ruofalshreef/model-a')
-```
-
-Place downloaded files under `data/` following the structure in the Repository Structure section below.
-
 ---
 
 ## Installation
@@ -182,31 +154,23 @@ RANDOM_SEED = 42
 
 ```
 TMSJ/
-├── README.md
+│
+├── Core_Legal_Datasets/
+│   ├── Saudi Commercial Court Decisions
+│   └── Saudi Legal Regulations
+│
+├── Model_Integration/
+│   └── End-to-End TMSJ Pipeline
+│
+├── Data_Collection_and_Web_Scraping_Code.rar
+├── Data_Preprocessing.ipynb
+│
+├── Model A – Legal Entity Extraction (NER).py
+├── Model B – Legal Scenario Generation.py
+├── Model C – Judicial Outcome Prediction and Explainability.py
+│
 ├── requirements.txt
-├── .gitignore
-│
-├── data/
-│   ├── README.md              ← Dataset download instructions (this section)
-│   ├── model_a/               ← BIO-tagged NER datasets + label_map.json
-│   ├── model_b/               ← Scenario generation data
-│   ├── model_c/               ← Judicial prediction datasets
-│   └── raw/                   ← 01_baseline_laws.jsonl, 03_segmented.csv
-│
-├── models/
-│   ├── model_a/               ← Saved AraBERTv0.2 NER weights
-│   ├── model_b/               ← Saved AraGPT2-base weights
-│   └── model_c/               ← Saved LinearSVC pipeline (.joblib)
-│
-├── notebooks/
-│   ├── TMSJ_Model_A.ipynb     ← NER: Legal Entity Extraction
-│   ├── TMSJ_Model_B.ipynb     ← Generation: Legal Scenario Building
-│   └── TMSJ_Model_C.ipynb     ← Classification: Verdict Prediction
-│
-└── outputs/
-    ├── model_a/               ← NER evaluation results
-    ├── model_b/               ← Generation scores & scenarios
-    └── model_c/               ← Prediction reports & explainability analysis
+└── README.md
 ```
 
 ---
@@ -242,12 +206,14 @@ Explainable Judicial Outcome Prediction
 
 ## Reproducibility
 
-All random seeds are fixed at **42** across all models. To reproduce results exactly:
+To reproduce the TMSJ framework results, execute the project notebooks sequentially:
 
-1. Download datasets using the Kaggle links above.
-2. Place data files in the `data/` directories as described.
-3. Run notebooks in order: Model A → Model B → Model C.
-4. Each notebook saves its outputs to `/kaggle/working/` (Kaggle) or `outputs/` (local).
+1. Data Preprocessing
+2. Model A – Legal Entity Extraction
+3. Model B – Legal Scenario Generation
+4. Model C – Judicial Outcome Prediction and Explainability
+
+All required dependencies are listed in `requirements.txt`.
 
 ---
 
@@ -257,21 +223,5 @@ All judicial case data was collected from publicly available official Saudi gove
 
 ---
 
-## License
 
-This project is the intellectual property of Umm Al-Qura University and is protected under applicable intellectual property laws. Usage for extension, product development, or commercial adoption requires permission from the University and the project supervisor.
 
----
-
-## Citation
-
-If you use this work, please cite:
-
-```
-Alowaydhi, M., Alshrif, R., Alhlis, J., & Alzahrani, F. (2026).
-Tri-Model Smart Justice Framework (TMSJ): An Integrated Arabic Legal AI
-System for Saudi Commercial Judicial Outcome Prediction with Explainability.
-BSc Graduation Project, Data Science Department, College of Computing,
-Umm Al-Qura University. Project ID: UQU-DS-2025-F08.
-Supervisor: Dr. Olfat Mirza.
-```
