@@ -162,8 +162,8 @@ TMSJ/
 ├── Model_Integration/
 │   └── End-to-End TMSJ Pipeline
 │
-├── Data_Collection_and_Web_Scraping_Code.rar
-├── Data_Preprocessing.ipynb
+├── Data_Collection and Web Scraping .rar
+├── Data Preprocessing.py
 │
 ├── Model A – Legal Entity Extraction (NER).py
 ├── Model B – Legal Scenario Generation.py
