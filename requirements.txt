@@ -1,6 +1,6 @@
 # ============================================================
 # TMSJ Project — Requirements
-# Model A (NER/Extraction) + Model B (Generation) + Model C (Classification)
+# Model A (NER/Extraction) + Model B (Generation) + Model C (Prediction)
 # ============================================================
 
 # --- Core Scientific Stack ---
