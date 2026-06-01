@@ -1,4 +1,4 @@
-# Framework_Integration
+# Model Integration
 
 This directory contains the intermediate data files exchanged between the three models of the Tri-Model Smart Justice Framework (TMSJ).
 
