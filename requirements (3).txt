@@ -1,0 +1,41 @@
+# ============================================================
+# TMSJ Project — Requirements
+# Model A (NER/Extraction) + Model B (Generation) + Model C (Classification)
+# ============================================================
+
+# --- Core Scientific Stack ---
+numpy
+pandas
+
+# --- PyTorch (GPU-enabled recommended) ---
+torch
+
+# --- Hugging Face Ecosystem ---
+transformers
+datasets
+accelerate
+evaluate
+
+# --- NER Evaluation ---
+seqeval
+
+# --- Text Generation Evaluation ---
+rouge-score
+sacrebleu
+nltk
+
+# --- Machine Learning (Model C) ---
+scikit-learn
+joblib
+
+# --- Tabular Display ---
+tabulate
+
+# --- Kaggle Integration ---
+kagglehub
+
+# --- NLP / Tokenization ---
+sentencepiece
+
+# --- Visualization (Model A training curves) ---
+matplotlib
