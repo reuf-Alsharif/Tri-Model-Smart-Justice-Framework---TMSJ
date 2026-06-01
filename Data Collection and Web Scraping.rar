@@ -1,1 +1,17 @@
+# Data Collection and Web Scraping
+
+This resource contains the web scraping and data collection implementation used in the Tri-Model Smart Justice Framework (TMSJ).
+
+The module was developed to collect:
+
+* Saudi commercial court decisions from the Ministry of Justice portal.
+* Saudi laws and regulations from the Bureau of Experts portal.
+
+The collected datasets were used to build the legal corpus utilized throughout the TMSJ framework.
+
+Google Drive Access:
+
+https://drive.google.com/file/d/1hcV0R49ejdXKleGFDw4tRfTJMGze1MRw/view?usp=sharing
+
+The web scraping system serves as the data collection stage of the TMSJ pipeline and provides the raw legal resources used during preprocessing, training, and evaluation.
 
