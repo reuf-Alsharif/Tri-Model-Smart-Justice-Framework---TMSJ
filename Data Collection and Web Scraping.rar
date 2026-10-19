@@ -1,17 +1,44 @@
 # Data Collection and Web Scraping
 
-This resource contains the web scraping and data collection implementation used in the Tri-Model Smart Justice Framework (TMSJ).
+## Overview
 
-The module was developed to collect:
+This module documents the data collection process for the Tri-Model Smart Justice Framework (TMSJ), which focuses on extracting information from Saudi legal documents and using it to develop AI-based legal analysis models.
 
-* Saudi commercial court decisions from the Ministry of Justice portal.
-* Saudi laws and regulations from the Bureau of Experts portal.
+## Data Sources
 
-The collected datasets were used to build the legal corpus utilized throughout the TMSJ framework.
+Legal documents were collected from two Saudi governmental sources:
 
-Google Drive Access:
+- **Ministry of Justice:** Commercial court judgments.
+- **Bureau of Experts at the Council of Ministers:** Saudi laws and regulations.
 
-https://drive.google.com/file/d/1hcV0R49ejdXKleGFDw4tRfTJMGze1MRw/view?usp=sharing
+## Data Collection Process
 
-The web scraping system serves as the data collection stage of the TMSJ pipeline and provides the raw legal resources used during preprocessing, training, and evaluation.
+The data collection workflow consisted of the following stages:
+
+1. **Source Identification:** Identifying relevant legal documents from the official Saudi government portals.
+2. **Document Collection:** Gathering commercial court judgments and legal regulations relevant to the project's scope.
+3. **Data Organization:** Organizing the collected documents into a structured legal corpus.
+4. **Data Preparation:** Preparing the collected material for preprocessing and subsequent model development.
+5. **Pipeline Integration:** Using the prepared corpus as the source material for the TMSJ models.
+
+## Dataset Overview
+
+The final legal corpus consisted of **4,702 legal documents**:
+
+- **4,677** Saudi commercial court decisions.
+- **25** statutory legal regulations.
+
+These documents formed the source corpus for the project's legal information extraction and scenario-generation workflows.
+
+## Role in the TMSJ Framework
+
+The collected legal documents support the framework's three main components:
+
+- **Model A — Legal Entity Extraction:** Extracting relevant legal entities from legal text.
+- **Model B — Legal Scenario Generation:** Generating synthetic legal dispute scenarios.
+- **Model C — Judicial Outcome Prediction:** Predicting potential outcomes for legal scenarios.
+
+## Data Availability and Privacy
+
+The underlying legal documents and collected dataset files are not included in this public repository. This repository documents the collection workflow and its role in the project while keeping the dataset files separate.
 
