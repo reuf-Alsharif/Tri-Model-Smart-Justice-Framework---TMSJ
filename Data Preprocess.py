@@ -1662,8 +1662,4 @@ print("=" * 60)
 print("✅ Pipeline complete! All checkpoints saved on Drive.")
 print("   Next time you run this cell, completed phases will be skipped.")
 print("=" * 60)
-
-# إذا حبيتي تعيدين مرحلة معينة من الصفر، شغّلي هذا:
-# clear_all_checkpoints()  # يمسح كل الـ checkpoints
-# أو امسحي checkpoint واحد:
-# os.remove(f"{CHECKPOINT_DIR}/phase3_entities.pkl")  # يعيد Phase 3 فقط
+فقط
